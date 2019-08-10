@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_bar"
+    android:background="@color/colorBg"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/master"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="35">
+        <LinearLayout style="@style/small_line_splitView_phone">
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/Table_Dynamic_splitView_phone"
+            android:background="#dadcde"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvTotaldue"
+                    style="@style/textviewLeft_splitView_phone"
+                    android:text="Total due :" />
+                <TextView
+                    android:id="@+id/tvTotaldueValue"
+                    style="@style/textviewRightNormal_splitView_phone"
+                    android:textColor="@color/colorBrown"
+                    android:text="0"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvCollected"
+                    style="@style/textviewLeft_splitView_phone"
+                    android:text="Collected :" />
+                <TextView
+                    android:id="@+id/tvCollectedValue"
+                    style="@style/textviewRightNormal_splitView_phone"
+                    android:textColor="@color/colorBrown"
+                    android:text="0" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvBalance"
+                    style="@style/textviewLeft_splitView_phone"
+                    android:text="Balance :" />
+                <TextView
+                    android:id="@+id/tvBalanceValue"
+                    android:textColor="@color/colorBrown"
+                    style="@style/textviewRightNormal_splitView_phone"
+                    android:text="0" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layPromo"
+            style="@style/Table_Dynamic_splitView_phone"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                style="@style/Icon_med_2_splitView_phone"
+                android:layout_gravity="center"
+                android:src="@drawable/plus1" />
+
+            <TextView
+                android:id="@+id/tvpromotion"
+                style="@style/textviewLeft_AfterImage_splitView_phone"
+                android:text="Add new collection..." />
+
+        </LinearLayout>
+        <LinearLayout style="@style/small_line_splitView_phone"></LinearLayout>
+        <!-- ListView -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#979797"
+                >
+            </LinearLayout>
+            <ListView
+                android:background="#ffffff"
+                android:layout_width="fill_parent"
+                android:id="@+id/list"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout style="@style/small_line_splitView_phone"></LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/detail"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_bar"
+    android:background="@color/colorBg"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/detail"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBar_splitView_phone"
+            >
+            <LinearLayout
+                android:id="@+id/LnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/toolbar_arrowback"
+                    style="@style/Image_backarrow_splitView_phone"
+                    />
+                <TextView
+                    android:id="@+id/toolbar_back"
+                    style="@style/toolBar_leftText_splitView_phone"
+                    android:text="@string/Back"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBar_middleText_splitView_phone"
+                android:text="Contact Detail"
+                />
+            <LinearLayout
+                android:id="@+id/LnRight"
+                style="@style/toolBar_right_splitView_phone"
+                >
+                <TextView
+                    android:id="@+id/toolbar_edit"
+                    style="@style/toolBar_rightText_splitView_phone"
+                    android:text="@string/Edit"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBg"
+            android:layout_below="@id/toolbar"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:background="@color/colorMedGrey"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/imgURL"
+                        style="@style/image_person_customer_detail_splitView_phone"
+                        android:src="@drawable/pkeng"
+                        android:layout_gravity="center"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvName"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="@dimen/Content_fontSize_splitView_phone"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Daydelete Mustwins" />
+                        <TextView
+                            android:id="@+id/tvNumber"
+                            android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                            style="@style/textviewLeft_splitView_phone"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvTitleProfile"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                            android:textColor="@color/colorHeavyGreyText"
+                            android:text="Title:"
+                            />
+                        <TextView
+                            android:id="@+id/tvTitleValue"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Manager:"
+                            />
+                        <TextView
+                            android:id="@+id/tvPosition"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                            android:textColor="@color/colorHeavyGreyText"
+                            android:text="Title:"
+                            />
+                        <TextView
+                            android:id="@+id/tvPositionValue"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="General Manager"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title01"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Is Owner?" />
+
+                    <TextView
+                        android:id="@+id/tvOwner"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text=""
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title02"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Is Decision Maker?" />
+
+                    <TextView
+                        android:id="@+id/tvDecision_maker"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title03"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Relation to Owner:" />
+
+                    <TextView
+                        android:id="@+id/tvRelation"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text="Husband" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title04"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Birthday:"
+                        android:textColor="@color/colorOrdiary"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvBirthday"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text="IT"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title05"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Mobile:"
+                        android:textColor="@color/colorOrdiary"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvMobile"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text="CD355118"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title06"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Email:"
+                        android:textColor="@color/colorOrdiary"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text="CD355118"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title07"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Line ID:"
+                        android:textColor="@color/colorOrdiary"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvLine"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text="CD355118"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Title_paddingLeft_Session_splitView_phone"
+                    android:orientation="horizontal"
+                    android:gravity="left|right"
+                    >
+                    <TextView
+                        android:id="@+id/titleFood"
+                        style="@style/Title_Text_Session_NoBold_splitView_phone"
+                        android:layout_gravity="bottom"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text="Food"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title08"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorBlue"
+                        android:text="Like:"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvLikeFood"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text=""
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title09"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorRed"
+                        android:text="Disike:"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvDisLikeFood"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text=""
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Title_paddingLeft_Session_splitView_phone"
+                    android:orientation="horizontal"
+                    android:gravity="left|right"
+                    >
+                    <TextView
+                        android:id="@+id/titleDrink"
+                        style="@style/Title_Text_Session_NoBold_splitView_phone"
+                        android:layout_gravity="bottom"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text="Drink"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title10"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorBlue"
+                        android:text="Like:"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvLikeDrink"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text=""
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title11"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorRed"
+                        android:text="Disike:"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvDisLikeDrink"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text=""
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title12"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Favorite Activities:"
+                        />
+                    <TextView
+                        android:id="@+id/tvFavoriteAct"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGreyText"
+                        android:text=""
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

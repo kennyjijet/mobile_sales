@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_bar"
+    android:background="@color/colorBg"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/detail"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBar_splitView_phone"
+            >
+            <LinearLayout
+                android:id="@+id/LnLeft"
+                style="@style/toolBar_leftText_splitView_phone"
+                >
+                <TextView
+                    android:id="@+id/tvgoCancel"
+                    style="@style/toolBar_leftText_splitView_phone"
+                    android:text="@string/Cancel"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBar_middleText_splitView_phone"
+                android:text="Product Detail"
+                android:textSize="@dimen/Content_fontSize_splitView_phone"
+                />
+
+            <LinearLayout
+                android:id="@+id/LnRight"
+                style="@style/toolBar_right_splitView_phone"
+                >
+                <TextView
+                    android:id="@+id/toolbar_done"
+                    style="@style/toolBar_rightText_splitView_phone"
+                    android:text="@string/Done"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        style="@style/Table_Dynamic_splitView_phone"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/tvProductName"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Name"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvProductId"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="4040400404040"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvProductDescription"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="This is an item."
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tvUnitPrice"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Price:"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvUnitPriceValue"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_marginRight="170dp"
+                            android:gravity="right"
+                            android:textSize="@dimen/Content_fontSize_splitView_phone"
+                            android:textColor="@color/colorBrown"
+                            android:text="4040400404040"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tvAvailable"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Available Qty:"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvAvailableValue"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_marginRight="170dp"
+                            android:gravity="right"
+                            android:textSize="@dimen/Content_fontSize_splitView_phone"
+                            android:textColor="@color/colorBrown"
+                            android:text="4040400404040"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tvUnit"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Unit:"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvUnitValue"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_marginRight="170dp"
+                            android:gravity="right"
+                            android:textSize="@dimen/Content_fontSize_splitView_phone"
+                            android:textColor="@color/colorBrown"
+                            android:text="4040400404040"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Title_Session_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/tv0"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:text="Inventory: "
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/tv1"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="On Shelf:"
+                        />
+                    <EditText
+                        android:id="@+id/ed1"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="0"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/tv2"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="In Stock:"
+                        />
+
+                    <EditText
+                        android:id="@+id/ed2"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="0"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/tv3"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Returns:"
+                        />
+                    <TextView
+                        android:id="@+id/ed3"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGrey"
+                        android:text="0"
+                        />
+                    <ImageView
+                        style="@style/Image_rightarrow_splitView_phone"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Title_Session_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/tv4"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:text="Order "
+                        />
+                    <TextView
+                        android:id="@+id/tv9"
+                        android:layout_marginLeft="130dp"
+                        android:layout_width="wrap_content"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:text="Total Amount: "
+                        />
+
+                    <TextView
+                        android:id="@+id/ed8"
+                        android:layout_width="wrap_content"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:hint="0"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/tv5"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Quantity: "
+                        />
+
+                    <TextView
+                        android:id="@+id/tv1Quan"
+                        android:layout_marginLeft="55dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorOrdiary"
+                        android:textSize="@dimen/Content_fontSize_splitView_phone"
+                        android:text="(0)"
+                        />
+
+                    <EditText
+                        android:id="@+id/ed4"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="0"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/tv7"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorGradientGreen2"
+                        android:text="FOC:          "
+                        />
+
+                    <TextView
+                        android:id="@+id/tv2FOC"
+                        android:layout_marginLeft="55dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorGradientGreen2"
+                        android:textSize="@dimen/Content_fontSize_splitView_phone"
+                        android:text="(0)"
+                        />
+
+                    <EditText
+                        android:id="@+id/ed6"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="0"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/tvDis1"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Discount 1:"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img1disc"
+                        android:layout_marginRight="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_percentage"/>
+
+                    <TextView
+                        android:id="@+id/tv1Disc"
+                        android:layout_marginRight="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/Content_fontSize_splitView_phone"
+                        android:text="(0)"
+                        />
+
+                    <EditText
+                        android:id="@+id/edDis1"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="0"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/tvDis2"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Discount 2:"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img2disc"
+                        android:layout_marginRight="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_percentage"/>
+
+                    <TextView
+                        android:id="@+id/tv2Disc"
+                        android:layout_marginRight="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/Content_fontSize_splitView_phone"
+                        android:text="(0)"
+                        />
+
+                    <EditText
+                        android:id="@+id/edDis2"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="0"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/tvDis3"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Discount 3:"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img3disc"
+                        android:layout_marginRight="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_percentage"/>
+
+                    <TextView
+                        android:id="@+id/tv3Disc"
+                        android:layout_marginRight="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/Content_fontSize_splitView_phone"
+                        android:text="(0)"
+                        />
+
+                    <EditText
+                        android:id="@+id/edDis3"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="0"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnPromTitle"
+                    style="@style/Title_Session_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/tvProm"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:text="Promotion: "
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnProm1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="77dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prom1Name"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Name1"/>
+                        <TextView
+                            android:id="@+id/prom1Name2"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Name2"/>
+                        <TextView
+                            android:id="@+id/prom1Code"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:textColor="@color/colorBrown"
+                            android:text="Code"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/prom1Date"
+                            style="@style/textviewRightNormal_splitView_phone"
+                            android:text="2016-06-30"
+                            />
+                        <ImageView
+                            style="@style/Image_rightarrow_splitView_phone"
+                            android:layout_marginRight="5dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnProm2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="77dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prom2Name"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Name1"/>
+                        <TextView
+                            android:id="@+id/prom2Name2"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Name2"/>
+                        <TextView
+                            android:id="@+id/prom2Code"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:textColor="@color/colorBrown"
+                            android:text="Code"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/prom2Date"
+                            style="@style/textviewRightNormal_splitView_phone"
+                            android:text="2016-06-30"
+                            />
+                        <ImageView
+                            style="@style/Image_rightarrow_splitView_phone"
+                            android:layout_marginRight="5dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnProm3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="77dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prom3Name"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Name1"/>
+                        <TextView
+                            android:id="@+id/prom3Name2"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Name2"/>
+                        <TextView
+                            android:id="@+id/prom3Code"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:textColor="@color/colorBrown"
+                            android:text="Code"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/prom3Date"
+                            style="@style/textviewRightNormal_splitView_phone"
+                            android:text="2016-06-30"
+                            />
+                        <ImageView
+                            style="@style/Image_rightarrow_splitView_phone"
+                            android:layout_marginRight="5dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnSeeall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/viewAll"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="View All"/>
+
+                    <ImageView
+                        style="@style/Image_rightarrow_splitView_phone"
+                        android:layout_marginRight="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

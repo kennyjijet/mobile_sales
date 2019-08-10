@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@color/colorBg"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="65"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_margin="0dp"
+                        >
+                        <ImageView
+                            style="@style/Icon_med_1_phone"
+                            android:background="@drawable/search"
+                            />
+                        <TextView
+                            android:id="@+id/search"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_margin="0dp"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Search"
+                            android:textSize="@dimen/Sub_Content_1_fontSize_phone"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <View
+                    style="@style/verticle_line"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorMedGrey"
+                    android:layout_weight="35"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorOrdiary"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:id="@+id/total_amount"
+                                style="@style/textviewLeft_phone"
+                                android:layout_margin="0dp"
+                                android:textColor="@color/colorOrdiary"
+                                android:text="Total Amount"
+                                android:textSize="18sp"
+                                android:layout_weight="40"
+                                />
+
+                            <TextView
+                                android:id="@+id/total_amount_value"
+                                style="@style/textviewRightNormal_phone"
+                                android:textColor="@color/colorBrown"
+                                android:text="27,000,000"
+                                android:textSize="18sp"
+                                android:layout_weight="60"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:id="@+id/foc"
+                                style="@style/textviewLeft_phone"
+                                android:layout_margin="0dp"
+                                android:textColor="@color/colorOrdiary"
+                                android:text="FOC"
+                                android:textSize="18sp"
+                                android:layout_weight="40"
+                                />
+
+                            <TextView
+                                android:id="@+id/foc_value"
+                                style="@style/textviewRightNormal_phone"
+                                android:textColor="@color/colorBrown"
+                                android:text="0"
+                                android:textSize="18sp"
+                                android:layout_weight="60"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:id="@+id/qty_of_products"
+                                style="@style/textviewLeft_phone"
+                                android:layout_margin="0dp"
+                                android:textColor="@color/colorOrdiary"
+                                android:text="Quantity Of Products"
+                                android:textSize="18sp"
+                                android:layout_weight="40"
+                                />
+
+                            <TextView
+                                android:id="@+id/qty_of_products_value"
+                                style="@style/textviewRightNormal_phone"
+                                android:textColor="@color/colorBrown"
+                                android:text="30"
+                                android:textSize="18sp"
+                                android:layout_weight="60"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/small_line_phone"
+                >
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/editText1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="100dp" />
+
+                <!--<ListView-->
+                    <!--android:id="@+id/list"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+                <!--</ListView>-->
+
+                <ListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent">
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+

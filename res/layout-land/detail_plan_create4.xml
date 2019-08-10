@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_bar"
+    android:background="@color/colorBg"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/master"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="35">
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/detail"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBar_splitView_phone"
+            >
+            <LinearLayout
+                android:id="@+id/LnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/toolbar_arrowback"
+                    style="@style/Image_backarrow_splitView_phone"
+                    />
+                <TextView
+                    android:id="@+id/tvgoBack"
+                    style="@style/toolBar_leftText_splitView_phone"
+                    android:text="@string/Back"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBar_middleText_splitView_phone"
+                android:text="Create New Plan"
+                />
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title01"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Number:"
+                        />
+                    <EditText
+                        android:id="@+id/edNumber"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:hint="Number"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title02"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Name:"
+                        />
+                    <EditText
+                        android:id="@+id/edName"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="Name"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title03"
+                        android:text="Date:"
+                        style="@style/textviewLeft_splitView_phone"
+                        />
+                    <TextView
+                        android:id="@+id/edDate"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="Date"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title04"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Plan-In Time:"
+                        />
+                    <EditText
+                        android:id="@+id/edPlanIn"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="Plan In"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title05"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Plan-Out Time:"
+                        />
+                    <EditText
+                        android:id="@+id/edPlanOut"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="Plan out"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity"
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:background="@color/colorBg"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title06"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Activities:"
+                        />
+                    <TextView
+                        android:id="@+id/tvActivity"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:text="Visit, Order Taking"
+                        />
+                    <ImageView
+                        style="@style/Image_rightarrow_splitView_phone"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title07"
+                        android:text="Pre-Visit Notes:"
+                        style="@style/textviewLeft_splitView_phone"
+                        />
+
+                    <DatePicker
+                        android:id="@+id/dpResult"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp" />
+
+                    <TimePicker
+                        android:id="@+id/tpResult"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp">
+
+                    </TimePicker>
+
+                    <TimePicker
+                        android:id="@+id/timePicker1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp" />
+
+                    <TimePicker
+                        android:id="@+id/tpResult2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp">
+
+                    </TimePicker>
+
+                    <TimePicker
+                        android:id="@+id/timePicker2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/note_parent_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <EditText
+                        android:id="@+id/edPreVisitNotes"
+                        style="@style/note_editText_whiteBg_splitView_phone"
+                        android:text=""
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <Button
+                        android:id="@+id/btnCreatePlan"
+                        style="@style/btn_splitView_phone"
+                        android:text="Create Plan"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

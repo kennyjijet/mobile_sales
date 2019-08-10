@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/invoice"
+                    style="@style/textviewLeft_bold_phone"
+                    android:text="Invoice # "/>
+
+                <TextView
+                    android:id="@+id/tvid"
+                    style="@style/textviewLeftBold_phone"
+                    android:textColor="@color/colorHeavyGrey"
+                    android:text="501020391"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/date"
+                    style="@style/textviewLeft_phone"
+                    android:text="Invoice date : "/>
+
+                <TextView
+                    android:id="@+id/tvdate"
+                    style="@style/textviewLeft_phone"
+                    android:textColor="@color/colorHeavyGrey"
+                    android:text="June 24, 2016"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/duedate"
+                    style="@style/textviewLeft_phone"
+                    android:text="Due date : "/>
+
+                <TextView
+                    android:id="@+id/tvduedate"
+                    style="@style/textviewLeft_phone"
+                    android:textColor="@color/colorHeavyGrey"
+                    android:text="June 25, 2016"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvprice"
+            style="@style/textviewRightNormal_phone"
+            android:textColor="@color/colorBrown"
+            android:text="625.15"/>
+
+        <ImageView
+            style="@style/Image_rightarrow_phone" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBg"
+    android:id="@+id/tab4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:background="@color/colorBg"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@color/colorLightGrey"
+            android:dividerHeight="5dp"
+            android:layout_gravity="center">
+            <LinearLayout
+                style="@style/small_line_phone"
+                >
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layPromo"
+                style="@style/Table_Dynamic_phone"
+                android:layout_gravity="center">
+                <ImageView
+                    style="@style/Icon_med_2_phone"
+                    android:id="@+id/imageView8"
+                    android:layout_gravity="center"
+                    android:src="@drawable/add"
+                    />
+                <TextView
+                    android:id="@+id/tvpromotion"
+                    style="@style/textviewLeft_AfterImage_phone"
+                    android:text="Add new merchandising..."
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/small_line_phone"
+        >
+    </LinearLayout>
+    <!-- ListView -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#979797"
+            >
+        </LinearLayout>
+        <ListView
+            android:background="#ffffff"
+            android:layout_width="fill_parent"
+            android:id="@+id/list"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/small_line_phone"
+        >
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</TableLayout>

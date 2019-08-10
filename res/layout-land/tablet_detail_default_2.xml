@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:visibility="gone"
+        android:id="@+id/toolbar"
+        style="@style/toolBar_phone"
+        >
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/toolBar_middleText_phone"
+            android:text="Promotion"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        style="@style/small_line_phone"
+        >
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_centerInParent="true"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/icon_default_promotion_grayscale">
+                </ImageView>
+
+    </RelativeLayout>
+
+        <LinearLayout
+            style="@style/small_line_phone"
+            >
+        </LinearLayout>
+
+
+</TableLayout>

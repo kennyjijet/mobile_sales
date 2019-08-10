@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_bar"
+    android:background="@color/colorBg"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/detail"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBar_splitView_phone"
+            >
+            <LinearLayout
+                android:id="@+id/LnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/tvgoCancel"
+                    style="@style/toolBar_leftText_splitView_phone"
+                    android:text="@string/Cancel"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBar_middleText_splitView_phone"
+                android:text="Delivery Details"
+                />
+            <LinearLayout
+                android:id="@+id/LnRight"
+                style="@style/toolBar_right_splitView_phone"
+                >
+                <TextView
+                    android:id="@+id/toolbar_done"
+                    style="@style/toolBar_rightText_splitView_phone"
+                    android:text="@string/Done"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBg"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+
+                    >
+                    <LinearLayout
+                        style="@style/small_line_splitView_phone"
+                        >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layBillTo"
+                        style="@style/Table_Dynamic_splitView_phone"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:id="@+id/tvBillTo"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Bill To"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvBillToShow"
+                            style="@style/textviewRightNormal_splitView_phone"
+                            android:textSize="20sp"
+                            android:text=" "
+                            />
+
+                        <ImageView
+                            style="@style/Image_rightarrow_splitView_phone"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/small_line_splitView_phone"
+                        >
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layShipTo"
+                        style="@style/Table_Dynamic_splitView_phone"
+                        >
+                        <TextView
+                            android:id="@+id/tvShipTo"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Ship To"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvShipToShow"
+                            style="@style/textviewRightNormal_splitView_phone"
+                            android:textSize="20sp"
+                            android:text=" "
+                            />
+
+                        <ImageView
+                            style="@style/Image_rightarrow_splitView_phone"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/small_line_splitView_phone"
+                        >
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layDelivery2"
+                        style="@style/Table_Dynamic_splitView_phone"
+                        >
+                        <TextView
+                            android:id="@+id/tvDelDate"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:text="Date"
+                            android:textColor="@color/colorOrdiary"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvDelDateDay"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="  "
+                            android:textColor="#115ed1"
+                            android:textSize="23sp"
+                            android:gravity="right" />
+
+                        <ImageView
+                            style="@style/Image_rightarrow_splitView_phone"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/small_line_splitView_phone"
+                        >
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:background="@color/colorBg"
+
+                    >
+                    <TextView
+                        android:id="@+id/tvPO"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="PO No."
+                        />
+
+                    <EditText
+                        android:id="@+id/editPO"
+                        android:hint="0"
+                        style="@style/textviewRightRound_splitView_phone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:background="@color/colorBg"
+                    >
+                    <TextView
+                        android:id="@+id/tvDis"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:text="Discount"
+                        />
+
+                    <EditText
+                        android:id="@+id/editDiscount"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:hint="0"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Title_Session_NoBg_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/tvRemarks"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:background="@color/colorBg"
+                        android:text="Remarks:"
+                        android:layout_weight="0.8"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/editRemarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:background="@color/colorBg"
+                        android:textSize="@dimen/Content_fontSize_splitView_phone"
+                        android:padding="@dimen/padding"
+                        android:textColor="@color/colorOrdiary"
+                        android:gravity="left"
+                        android:hint="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Title_Session_splitView_phone"
+                    android:background="@color/colorHeavyGrey"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/tvItems"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:textColor="@color/colorGradientYellow1"
+                        android:textStyle="bold"
+                        android:text="Items:"
+                        android:gravity="center"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/tvtotalAmount"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:textColor="@color/colorBg"
+                        android:textStyle="bold"
+                        android:text="Total Amount:0"
+                        android:gravity="center"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/tvTitleRemain"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:textColor="@color/colorGradientYellow1"
+                        android:textStyle="bold"
+                        android:text="Remain"
+                        android:gravity="right"
+                        android:layout_weight="0.5"/>
+
+                    <DatePicker
+                        android:id="@+id/dpResult"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp" />
+                </LinearLayout>
+
+                <!-- ListView -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical" >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#979797"
+                        >
+                    </LinearLayout>
+                    <ListView
+                        android:background="#ffffff"
+                        android:layout_width="match_parent"
+                        android:id="@+id/list"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

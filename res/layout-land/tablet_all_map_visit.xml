@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foursquared="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_bar"
+    android:background="@color/colorToolbarGrey"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/master"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBar_phone"
+            android:layout_height="0dp"
+            >
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBar_middleText_phone"
+
+                android:text="Map"
+                />
+        </android.support.v7.widget.Toolbar>
+        <LinearLayout
+            style="@style/small_line_phone"
+            >
+        </LinearLayout>
+
+
+        <!--Map Start-->
+        <LinearLayout
+            android:id="@+id/header"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dip"
+            android:paddingBottom="8dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:background="@drawable/header_blue">
+
+            <com.salesforce.android.restsample.Tablet.widget.SegmentedButton2
+                android:id="@+id/segmented"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                foursquared:gradientColorOnStart="#f8f8f8"
+                foursquared:gradientColorOnEnd="#f8f8f8"
+                foursquared:gradientColorOffStart="#5e5cd7"
+                foursquared:gradientColorOffEnd="#5e5cd7"
+                foursquared:gradientColorSelectedStart="#FFAA00"
+                foursquared:gradientColorSelectedEnd="#FFAA00"
+                foursquared:textStyle="@style/TextViewStyleHeaderButtonBlue"
+                foursquared:strokeColor="#5e5cd7"
+                foursquared:strokeWidth="2dip"
+                foursquared:cornerRadius="10dip"
+                foursquared:btnPaddingTop="2dip"
+                foursquared:btnPaddingBottom="2dip"
+                />
+
+        </LinearLayout>
+        <!--Map End-->
+        <!--#f4e802-->
+        <LinearLayout
+
+            android:background="#f4e802"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:padding="3dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/mLocationTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:text="Searching current location.."
+                android:textColor="#fdfdf6"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/mMapView"
+            android:name="com.google.android.gms.maps.MapFragment"
+            class="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/control_layout"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

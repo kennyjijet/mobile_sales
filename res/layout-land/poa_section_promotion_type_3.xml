@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#B3aaaaaa"
+        android:layout_margin="0dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="0dp">
+
+            <TextView
+                android:id="@+id/list_item_section_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:layout_marginLeft="5dp"
+                android:textColor="#fffefd"
+                android:textSize="20sp"
+                android:text="test"
+                android:layout_weight="55"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="45">
+                <TextView
+                    android:id="@+id/ttPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:singleLine="true"
+                    android:textColor="#fffefd"
+                    android:textSize="20sp"
+                    android:gravity="end"
+                    android:paddingRight="10dp"
+                    android:text="Price"/>
+                <TextView
+                    android:id="@+id/ttTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:layout_weight="50"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="#fffefd"
+                    android:textSize="20sp"
+                    android:text="Qty"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

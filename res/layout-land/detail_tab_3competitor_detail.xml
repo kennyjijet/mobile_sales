@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_bar"
+    android:background="@color/colorBg"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/detail"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBar_splitView_phone"
+            >
+            <LinearLayout
+                android:id="@+id/LnLeft"
+                style="@style/toolBar_leftText_splitView_phone"
+                >
+                <TextView
+                    android:id="@+id/tvgoCancel"
+                    style="@style/toolBar_leftText_splitView_phone"
+                    android:text="@string/Cancel"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBar_middleText_splitView_phone"
+                android:text="Competitor Detail"
+                android:textSize="@dimen/Content_fontSize_splitView_phone"
+                />
+
+            <LinearLayout
+                android:id="@+id/LnRight"
+                style="@style/toolBar_right_splitView_phone"
+                >
+                <TextView
+                    android:id="@+id/toolbar_done"
+                    style="@style/toolBar_rightText_splitView_phone"
+                    android:text="@string/Done"
+                    />
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorBg"
+                >
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title00"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Competitor Of:" />
+
+                    <TextView
+                        android:id="@+id/tvCompOf"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:text="SOS Plast"
+                        android:layout_marginRight="5dp"
+                        />
+                    <ImageView
+                        android:id="@+id/arrow0"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/arrow"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title01"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Competitor Brand:" />
+
+                    <TextView
+                        android:id="@+id/tvCompBrand"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:text="SOS Plast"
+                        android:layout_marginRight="5dp"
+                        />
+                    <ImageView
+                        android:id="@+id/arrow1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/arrow"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title02"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Product Name:" />
+
+                    <EditText
+                        android:id="@+id/edProName"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="Product name"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title03"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Retail Price:" />
+
+                    <EditText
+                        android:id="@+id/edRetPrice"
+                        android:inputType="number"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="0" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title04"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Wholesale Price:" />
+
+                    <EditText
+                        android:id="@+id/edWholePrice"
+                        android:inputType="number"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title05"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Activity:" />
+
+                    <TextView
+                        android:id="@+id/tvActivity"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGrey"
+                        android:text="Example prooduct"
+                        />
+                    <ImageView
+                        style="@style/Image_rightarrow_splitView_phone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title06"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Display Location:" />
+
+                    <TextView
+                        android:id="@+id/tvDisLocation"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGrey"
+                        android:text="Promotion Shelf"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/arrow"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title07"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Pop:" />
+
+                    <TextView
+                        android:id="@+id/tvPop"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGrey"
+                        android:text="Stand Display"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/arrow"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title08"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Priority:" />
+
+                    <TextView
+                        android:id="@+id/tvPriority"
+                        style="@style/textviewRightNormal_splitView_phone"
+                        android:textColor="@color/colorHeavyGrey"
+                        android:text="Urgent"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/arrow"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title09"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Photo:"
+                        />
+                    <ImageView
+                        android:id="@+id/imgPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:src="@drawable/photon"
+                        android:layout_marginRight="@dimen/marginRightBorder_splitView_phone"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

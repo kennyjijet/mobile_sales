@@ -1,0 +1,29 @@
+<resources>
+
+    <!--
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    -->
+
+        <!-- Base application theme. -->
+        <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+            <!-- Customize your theme here. -->
+            <item name="colorPrimary">@color/color_primary</item>
+            <item name="colorPrimaryDark">@color/color_primary_dark</item>
+            <item name="colorAccent">@color/accent_color</item>
+            <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        </style>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <item name="android:windowTitleSize">20dip</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <!-- API 11 theme customizations can go here. -->
+    </style>
+
+    <style name="AppBaseThemeNoBar" parent="Theme.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <!-- API 14 theme customizations can go here. -->
+    </style>
+
+</resources>

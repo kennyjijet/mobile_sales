@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolBar_phone"
+        >
+        <LinearLayout
+            android:id="@+id/LnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/goBack"
+                style="@style/Image_backarrow_phone"
+                />
+            <TextView
+                android:id="@+id/tvgoBack"
+                style="@style/toolBar_leftText_phone"
+                android:text="@string/Back"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/toolBar_middleText_phone"
+            android:text="Plans"
+            />
+        <ImageView
+            android:id="@+id/goMap"
+            android:layout_marginRight="10dp"
+            android:layout_height="35dp"
+            android:layout_width="35dp"
+            android:src="@drawable/ic_map1"
+            style="@style/toolBar_right_phone"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        style="@style/small_line_phone"
+        >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical">
+        <LinearLayout
+            style="@style/Table_Dynamic_phone"
+            android:background="@color/colorBg"
+            android:layout_gravity="center">
+            <ImageView
+                style="@style/Icon_med_3_phone"
+                android:id="@+id/imageView8"
+                android:src="@drawable/planiconround"
+                />
+            <TextView
+                android:id="@+id/tvcreatenewdev"
+                style="@style/textviewLeft_AfterImage_phone"
+                android:layout_marginLeft="@dimen/marginLeftBorder_1_phone"
+                android:text="Create new plan.."
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/small_line_phone"
+            >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout android:id="@+id/leftLayout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="fill_parent"
+                android:paddingBottom="0dp">
+                <!-- Editext for Search -->
+
+                <LinearLayout
+                    style="@style/search_bar_parent_phone"
+                    >
+                    <LinearLayout
+                        style="@style/search_bar_NoBg_phone"
+                        >
+                        <SearchView
+                            android:id="@+id/search"
+                            style="@style/search_bar_typeing_text_phone"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="1dp"
+                    android:divider="@color/colorLightGrey"
+                    android:dividerHeight="2dp"
+                    android:textSize ="@dimen/itemSubHeight_phone"
+                    >
+                </ListView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</TableLayout>

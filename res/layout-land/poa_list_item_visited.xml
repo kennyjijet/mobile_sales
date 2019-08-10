@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+            <ImageView
+                android:id="@+id/Img"
+                style="@style/image_person_customer_detail_phone"
+                android:src="@drawable/people"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/textviewLeft_phone"
+                android:text="Name"
+                android:layout_marginTop="22dp"
+                />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/textviewLeft_phone"
+                android:text="Title"
+                android:textColor="@color/colorHeavyGrey"
+                />
+
+            <TextView
+                android:id="@+id/tvPos"
+                style="@style/textviewLeft_phone"
+                android:text="Position"
+                android:textColor="@color/colorBrown"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/small_line_phone"
+        >
+    </LinearLayout>
+
+</LinearLayout>

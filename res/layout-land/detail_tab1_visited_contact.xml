@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_bar"
+    android:background="@color/colorBg"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/detail"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBar_splitView_phone"
+            >
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBar_middleText_splitView_phone"
+                android:text="Visited Contact"
+                />
+
+            <LinearLayout
+                android:id="@+id/LnRight"
+                style="@style/toolBar_right_splitView_phone"
+                >
+                <TextView
+                    android:id="@+id/tvEdit"
+                    style="@style/toolBar_rightText_splitView_phone"
+                    android:text="@string/Edit"
+                    />
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:background="@color/colorBg"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:dividerHeight="5dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/search_bar_parent_splitView_phone"
+                    >
+                    <LinearLayout
+                        style="@style/search_bar_NoBg_splitView_phone"
+                        >
+                        <SearchView
+                            android:id="@+id/search"
+                            style="@style/search_bar_typeing_text_splitView_phone"
+                            />
+                    </LinearLayout>
+                    <!--<ImageView
+                        android:id="@+id/cancel"
+                        style="@style/Icon_search_close_splitView_phone"
+                        />
+                        -->
+                </LinearLayout>
+
+                <!--
+                <LinearLayout
+                    style="@style/search_bar_parent_splitView_phone"
+                    >
+                    <LinearLayout
+                        style="@style/search_bar_NoBg_splitView_phone"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            style="@style/Icon_small_splitView_phone"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/marginLeftBorder_splitView_phone"
+                            android:id="@+id/imageView9"
+                            android:src="@drawable/search"
+                            />
+                        <EditText
+                            android:id="@+id/search"
+                            style="@style/search_bar_editText_center_splitView_phone"
+                            />
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/cancel"
+                        style="@style/Icon_small_splitView_phone"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:background="@drawable/cross2"
+                        android:layout_marginRight="@dimen/marginRightBorder_1_splitView_phone"
+                        />
+                </LinearLayout>
+                -->
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/small_line_splitView_phone"
+            >
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    style="@style/Title_Session_NoBg_splitView_phone"
+                    android:background="@color/colorHeavyGrey"
+                    >
+                    <TextView
+                        android:id="@+id/Title1"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:text="Branch"
+                        android:textColor="@color/colorBg"
+                        >
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    >
+                    <ImageView
+                        android:id="@+id/Img1"
+                        style="@style/image_person_customer_detail_splitView_phone"
+                        android:src="@drawable/people"
+                        />
+                    <LinearLayout
+                        style="@style/Table_Dynamic_splitView_phone"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/tt1"
+                            style="@style/Title_Text_Session_splitView_phone"
+                            android:text="Mama Meme"
+                            android:textColor="@color/colorOrdiary"
+                            >
+                        </TextView>
+                        <TextView
+                            android:id="@+id/tt2"
+                            style="@style/Title_Text_Session_splitView_phone"
+                            android:text="Test"
+                            android:textColor="@color/colorHeavyGrey"
+                            >
+                        </TextView>
+                        <TextView
+                            android:id="@+id/tt3"
+                            style="@style/Title_Text_Session_splitView_phone"
+                            android:text="Mama Meme"
+                            android:textColor="@color/colorBrown"
+                            >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Title_Session_NoBg_splitView_phone"
+                    android:background="@color/colorHeavyGrey"
+                    >
+                    <TextView
+                        android:id="@+id/Title2"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:text="Head Office"
+                        android:textColor="@color/colorBg"
+                        >
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    >
+                    <ImageView
+                        android:id="@+id/Img2"
+                        style="@style/image_person_customer_detail_splitView_phone"
+                        android:src="@drawable/people"
+                        />
+                    <LinearLayout
+                        style="@style/Table_Dynamic_splitView_phone"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/tt4"
+                            style="@style/Title_Text_Session_splitView_phone"
+                            android:text="Mama Meme"
+                            android:textColor="@color/colorOrdiary"
+                            >
+                        </TextView>
+                        <TextView
+                            android:id="@+id/tt5"
+                            style="@style/Title_Text_Session_splitView_phone"
+                            android:text="Test"
+                            android:textColor="@color/colorHeavyGrey"
+                            >
+                        </TextView>
+                        <TextView
+                            android:id="@+id/tt6"
+                            style="@style/Title_Text_Session_splitView_phone"
+                            android:text="Mama Meme"
+                            android:textColor="@color/colorBrown"
+                            >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    >
+                    <ImageView
+                        android:id="@+id/Img3"
+                        style="@style/image_person_customer_detail_splitView_phone"
+                        android:src="@drawable/people"
+                        />
+                    <LinearLayout
+                        style="@style/Table_Dynamic_splitView_phone"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/tt7"
+                            style="@style/Title_Text_Session_splitView_phone"
+                            android:text="Mama Meme"
+                            android:textColor="@color/colorOrdiary"
+                            >
+                        </TextView>
+                        <TextView
+                            android:id="@+id/tt8"
+                            style="@style/Title_Text_Session_splitView_phone"
+                            android:text="Test"
+                            android:textColor="@color/colorHeavyGrey"
+                            >
+                        </TextView>
+                        <TextView
+                            android:id="@+id/tt9"
+                            style="@style/Title_Text_Session_splitView_phone"
+                            android:text="Mama Meme"
+                            android:textColor="@color/colorBrown"
+                            >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

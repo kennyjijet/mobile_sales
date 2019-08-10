@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_bar"
+    android:background="@color/colorBg"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/master"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="35"
+        >
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/detail"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBar_splitView_phone"
+            >
+            <LinearLayout
+                android:id="@+id/LnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/tvgoCancel"
+                    style="@style/toolBar_leftText_splitView_phone"
+                    android:text="@string/Cancel"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBar_middleText_splitView_phone"
+                android:text="New Bill To"
+                />
+            <LinearLayout
+                android:id="@+id/LnRight"
+                style="@style/toolBar_right_splitView_phone"
+                >
+                <TextView
+                    android:id="@+id/toolbar_done"
+                    style="@style/toolBar_rightText_splitView_phone"
+                    android:text="@string/Done"
+                    />
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorBg"
+                >
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:background="@color/colorMedGrey"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        >
+                        <ImageView
+                            android:id="@+id/leftImage"
+                            android:src="@drawable/people"
+                            style="@style/image_person_customer_detail_splitView_phone"
+                            android:layout_marginLeft="@dimen/marginRightBorder_splitView_phone"
+                            android:gravity="center"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        >
+                        <ImageView
+                            android:id="@+id/rightImage"
+                            style="@style/image_person_customer_detail_splitView_phone"
+                            android:src="@drawable/map"
+                            android:layout_marginRight="@dimen/marginRightBorder_splitView_phone"
+                            android:gravity="center"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title01"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Name:"
+                        />
+
+                    <EditText
+                        android:id="@+id/edName"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:hint="Branch name.."
+                        android:textColor="@color/colorOrdiary"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title02"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Address Line1:"
+                        />
+
+                    <EditText
+                        android:id="@+id/edAddress1"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:layout_weight="0.5"
+                        android:gravity="left"
+                        android:hint="House number Street.."
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title03"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Address Line2:"
+                        />
+
+                    <EditText
+                        android:id="@+id/edAddress2"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:hint="Address Line 2"
+                        android:textColor="@color/colorOrdiary"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title03after"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Sub District:"
+                        />
+
+                    <EditText
+                        android:id="@+id/edSubDistrict"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:hint="Sub district..."
+                        android:textColor="@color/colorOrdiary"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title04"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="District:"
+                        />
+
+                    <EditText
+                        android:id="@+id/edCity"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:hint="City or District name.."
+                        android:textColor="@color/colorOrdiary"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title05"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Province:" />
+
+                    <EditText
+                        android:id="@+id/edState"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="State or Province" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title06"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Country:" />
+
+                    <EditText
+                        android:id="@+id/edCountry"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="Country" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    />
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title07"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Postal Code:" />
+
+                    <EditText
+                        android:id="@+id/edZip"
+                        android:inputType="number"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="Zip or Postal Code" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title08"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Phone1:" />
+
+                    <EditText
+                        android:id="@+id/edPhone1"
+                        android:inputType="number"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="Phone1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title09"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Phone2:" />
+
+                    <EditText
+                        android:id="@+id/edPhone2"
+                        android:inputType="number"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="Phone2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title10"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Mobile:" />
+
+                    <EditText
+                        android:id="@+id/edMobile"
+                        android:inputType="number"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="Mobile" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title11"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Fax:" />
+
+                    <EditText
+                        android:id="@+id/edFax"
+                        android:inputType="number"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="Fax" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title12"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_weight="0.5"
+                        android:text="Email:" />
+
+                    <EditText
+                        android:id="@+id/edEmail"
+                        android:inputType="textEmailAddress"
+                        style="@style/textviewRightRound_leftGravity_splitView_phone"
+                        android:gravity="left"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="Email" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

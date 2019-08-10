@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_bar"
+    android:background="@color/colorBg"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/master"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="35">
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/detail"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBar_splitView_phone"
+            >
+            <LinearLayout
+                android:id="@+id/LnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/toolbar_back"
+                    style="@style/toolBar_leftText_splitView_phone"
+                    android:text="@string/Cancel"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBar_middleText_splitView_phone"
+                android:text="Edit Customer"
+                />
+            <LinearLayout
+                android:id="@+id/LnRight"
+                style="@style/toolBar_right_splitView_phone"
+                >
+                <TextView
+                    android:id="@+id/toolbar_done"
+                    style="@style/toolBar_rightText_splitView_phone"
+                    android:text="@string/Done"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    style="@style/person_centralized_bg_phone"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_weight="0.9"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageCenter"
+                            android:src="@drawable/people"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="35dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            style="@style/Icon_med_3_phone"
+                            android:src="@drawable/attachment"
+                            android:layout_gravity="bottom"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title01"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Number:" />
+                    <EditText
+                        android:id="@+id/edNumber"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:hint="Number"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title02"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Name:" />
+
+                    <EditText
+                        android:id="@+id/edName"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:background="@drawable/round_edit"
+                        android:hint="Name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title03"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Channel:" />
+                    <EditText
+                        android:id="@+id/edChannel"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:background="@drawable/round_edit"
+                        android:hint="Channel" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title04"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Phone1:" />
+
+                    <EditText
+                        android:id="@+id/edPhone1"
+                        android:inputType="number"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:background="@drawable/round_edit"
+                        android:hint="Phone1" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title05"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Phone2:" />
+
+                    <EditText
+                        android:id="@+id/edPhone2"
+                        android:inputType="number"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:background="@drawable/round_edit"
+                        android:hint="Phone2" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title06"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Mobile:" />
+
+                    <EditText
+                        android:id="@+id/edMobile"
+                        android:inputType="number"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:background="@drawable/round_edit"
+                        android:hint="Mobile" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title07"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Fax:" />
+
+                    <EditText
+                        android:id="@+id/edFax"
+                        android:inputType="number"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:background="@drawable/round_edit"
+                        android:hint="Fax" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title08"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Email:" />
+
+                    <EditText
+                        android:id="@+id/edEmail"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:background="@drawable/round_edit"
+                        android:hint="Email" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/title09"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:text="Website:" />
+
+                    <EditText
+                        android:id="@+id/edWebsite"
+                        style="@style/textviewRightRound_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:background="@drawable/round_edit"
+                        android:hint="Website" />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tvContacts"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.9"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Contacts" />
+
+                        <ImageView
+                            style="@style/Image_rightarrow_splitView_phone"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    />
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tvBillTo"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.9"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Bill To" />
+
+                        <ImageView
+                            style="@style/Image_rightarrow_splitView_phone"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tvShipTo"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.9"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Ship To" />
+
+                        <ImageView
+                            style="@style/Image_rightarrow_splitView_phone"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Title_Session_splitView_phone"
+                    >
+                    <TextView
+                        android:id="@+id/salesHistory"
+                        style="@style/Title_Text_Session_splitView_phone"
+                        android:text="Sales History" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal" >
+                    <LinearLayout
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_marginLeft="0dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/Sub_Content_1_fontSize_splitView_phone"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Invoice #111111" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/Mini_Content_fontSize_splitView_phone"
+                            android:paddingLeft="8dp"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Invoice data" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/Mini_Content_fontSize_splitView_phone"
+                            android:paddingLeft="8dp"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Due date" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/Sub_Content_1_fontSize_splitView_phone"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="3,378.11"/>
+
+                        <ImageView
+                            style="@style/Image_rightarrow_splitView_phone"
+                            android:layout_marginRight="10dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal" >
+                    <LinearLayout
+                        style="@style/textviewLeft_splitView_phone"
+                        android:layout_marginLeft="0dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/Sub_Content_1_fontSize_splitView_phone"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Invoice #111111" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/Mini_Content_fontSize_splitView_phone"
+                            android:paddingLeft="8dp"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Invoice data" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/Mini_Content_fontSize_splitView_phone"
+                            android:paddingLeft="8dp"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="Due date" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/Sub_Content_1_fontSize_splitView_phone"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorOrdiary"
+                            android:text="3,378.11"/>
+
+                        <ImageView
+                            style="@style/Image_rightarrow_splitView_phone"
+                            android:layout_marginRight="10dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_bar"
+    android:background="@color/colorBg"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/detail"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBar_splitView_phone"
+            >
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBar_middleText_splitView_phone"
+                android:text="Plan detail"
+                />
+            <LinearLayout
+                android:id="@+id/LnRight"
+                style="@style/toolBar_right_splitView_phone"
+                >
+                <TextView
+                    android:id="@+id/toolbar_edit"
+                    style="@style/toolBar_rightText_splitView_phone"
+                    android:text="@string/Edit"
+                    />
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorBg"
+                >
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:background="@color/colorMedGrey"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        >
+                        <ImageView
+                            android:id="@+id/imageLeft"
+                            android:src="@drawable/businessbuilding"
+                            style="@style/image_person_customer_detail_splitView_phone"
+                            android:layout_marginLeft="@dimen/marginRightBorder_splitView_phone"
+                            android:gravity="center"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearfragmentMap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="0.5"
+                        >
+
+                        <!--<fragment-->
+                            <!--android:id="@+id/googleMap"-->
+                            <!--style="@style/fragment_splitView_phone"-->
+                            <!--class="com.google.android.gms.maps.SupportMapFragment"-->
+                            <!--android:layout_above="@+id/latlongLocation" />-->
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/latlongLocation"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:layout_alignParentBottom="true"
+                            android:background="#ff058fff"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="#ffffffff"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:orientation="vertical"
+                        android:layout_weight="0.9"
+                        >
+                        <!--
+                        <TextView
+                            android:id="@+id/tv_address1"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                            android:textColor="@color/colorHeavyGrey"
+                            android:text="Address: "/>
+                        -->
+                        <!-- address to type -->
+                        <TextView
+                            android:id="@+id/tv_type"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:textColor="@color/colorBrown"
+                            android:text="Type:"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:id="@+id/tv_1street"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                                android:textColor="@color/colorOrdiary"
+                                android:text="Street"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_2city"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                                android:textColor="@color/colorOrdiary"
+                                android:text="City"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_3state"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                                android:textColor="@color/colorOrdiary"
+                                android:text="State"/>
+
+                            <TextView
+                                android:id="@+id/tv_4country"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                                android:textColor="@color/colorOrdiary"
+                                android:text="Country"/>
+
+                            <TextView
+                                android:id="@+id/tv_5postalcode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                                android:textColor="@color/colorOrdiary"
+                                android:text="PostalCode"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_6phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                                android:textColor="@color/colorOrdiary"
+                                android:text="Phone"/>
+
+                            <TextView
+                                android:id="@+id/tv_7mobile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                                android:textColor="@color/colorOrdiary"
+                                android:text="Mobile"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        style="@style/Image_rightarrow_splitView_phone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:id="@+id/linearCustomer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.9"
+                        >
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/itemHeight_splitView_phone"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:id="@+id/tv_name0"
+                                style="@style/textviewLeft_NoWeight_splitView_phone"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorOrdiary"
+                                android:text="Customer:"
+                                />
+                            <TextView
+                                android:id="@+id/tv_name"
+                                style="@style/textviewLeft_AfterImage_splitView_phone"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBrown"
+                                android:text="Name"
+                                />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/textViewCode"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:textColor="@color/colorHeavyGrey"
+                            android:layout_height="@dimen/itemHeight_splitView_phone"
+                            android:text="id"
+                            />
+                    </LinearLayout>
+                    <ImageView
+                        style="@style/Image_rightarrow_splitView_phone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/thick_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/tv_time1"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                        android:textColor="@color/colorHeavyGrey"
+                        android:text="Time:"/>
+                    <TextView
+                        android:id="@+id/tv_time2"
+                        style="@style/textviewLeft_splitView_phone"
+                        android:textColor="@color/colorOrdiary"
+                        android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                        android:text="Time Detail"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_activities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorHeavyGrey"
+                        android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                        android:text="Activities"/>
+                    <TextView
+                        android:id="@+id/tv_activities_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                        android:background="@color/colorBg"
+                        android:text=""
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/Table_Dynamic_splitView_phone"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:id="@+id/linearLayout5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.9"
+                        >
+                        <TextView
+                            android:id="@+id/tv_previsitnote1"
+                            style="@style/textviewLeft_splitView_phone"
+                            android:textSize="@dimen/Sub_Content_fontSize_splitView_phone"
+                            android:text="Pre-Visit Notes: "/>
+
+                        <TextView
+                            android:id="@+id/tv_previsitnote2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorBg"
+                            android:text=""
+                            />
+                    </LinearLayout>
+                    <ImageView
+                        style="@style/Image_rightarrow_splitView_phone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/small_line_splitView_phone"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    style="@style/visit_btn_bg_splitView_phone"
+                    >
+
+                    <Button
+                        style="@style/visit_btn_splitView_phone"
+                        android:id ="@+id/btnStartVisit"
+                        android:text="Start Visit"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
